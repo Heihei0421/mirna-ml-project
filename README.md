@@ -5,9 +5,19 @@ This project aims to predict whether a microRNA (miRNA) is associated with cance
 ---
 
 ## 📁 Project Structure
-‘’‘
-mirna-ml-project/ ├── notebooks/ │ ├── 01_data_eda.ipynb # Data cleaning & feature engineering │ └── 02_model_training.ipynb # Model training, evaluation & visualization ├── data/ │ └── processed/ │ └── mirna_features.csv # Final feature dataset used for modeling ├── README.md └── requirement.txt # Python dependencies
-’‘’
+
+```
+mirna-ml-project/
+├── notebooks/
+│   ├── 01_data_eda.ipynb           # Data cleaning & feature engineering
+│   └── 02_model_training.ipynb     # Model training, evaluation & visualization
+├── data/
+│   └── processed/
+│       └── mirna_features.csv      # Final feature dataset used for modeling
+├── README.md
+└── requirement.txt                 # Python dependencies
+```
+
 
 ---
 
@@ -59,7 +69,8 @@ All evaluations and plots are available in `02_model_training.ipynb`.
 
 ## 📈 Sample Output
 
-> 💬 You can add your confusion matrix / feature importance image below if you'd like!
+<img width="535" alt="截屏2025-04-07 22 48 47" src="https://github.com/user-attachments/assets/e2e0e965-7442-40cc-a656-20a1d37f8ebb" />
+
 
 ```python
 ROC-AUC Score: 0.87
