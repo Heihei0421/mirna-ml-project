@@ -1,6 +1,7 @@
 <p align="center">
-  <img src="https://github.com/Heihei0421/mirna-ml-project/blob/main/banner.png" alt="miRNA ML Banner" width="600"/>
+  <img src="https://raw.githubusercontent.com/Heihei0421/mirna-ml-project/main/banner.png" alt="miRNA ML Banner" width="600"/>
 </p>
+
 
 #  miRNA-Disease Association Prediction using Machine Learning
 
