@@ -1,34 +1,63 @@
 # Bioinformatics & Machine Learning Project
+# Predicting Cancer-Associated microRNAs using Machine Learning
 
-This project explores the application of machine learning techniques in bioinformatics, with a focus on miRNA classification (or gene expression clustering). It is developed as part of the MSc Data Science coursework under the supervision of Professor Kevin Bryson.
+This project explores the use of sequence-derived features from human microRNAs to predict their association with cancer using machine learning models.
 
-## Project Objectives
+**Supervisor**: Prof. Kevin Bryson  
+**Student**: Hang Yin | MSc Data Science, University of Glasgow
 
-- Download and preprocess biological data (from miRBase or GEO)
-- Extract useful features from sequence or expression data
-- Apply ML models to perform classification or clustering
+---
+
+## Objectives
+
+- Integrate public bioinformatics data (HMDD, miRBase)
+- Extract simple but effective features (e.g. GC content, sequence length)
+- Train ML models to predict miRNA-disease associations
 - Evaluate model performance and interpret biological relevance
 
-## Data Sources
+---
 
-- miRBase: https://www.mirbase.org/
-- GEO: https://www.ncbi.nlm.nih.gov/geo/
+## Dataset Sources
 
-## Timeline
+- **HMDD v3.2**: [http://www.cuilab.cn/hmdd](http://www.cuilab.cn/hmdd)  
+- **miRBase**: [https://www.mirbase.org/download/](https://www.mirbase.org/download/)
 
-| Week | Task |
-|------|------|
-| 1    | Data understanding, EDA |
-| 2    | Feature engineering |
-| 3    | Model training |
-| 4    | Results analysis & report writing |
+The final processed dataset contains:
+- 800+ labeled miRNAs
+- Features: GC content, sequence length (k-mer to be added)
+- Binary label: 1 = cancer-related, 0 = not cancer-related
 
-## Project Status
+---
 
-- [x] Dataset identified
-- [ ] Initial EDA completed
-- [ ] Feature extraction ongoing
-- [ ] Model in progress
+## Methodology
+
+| Step | Description |
+|------|-------------|
+| 1 | Load miRNA sequence & cancer association |
+| 2 | Feature extraction (GC %, length) |
+| 3 | Random Forest classifier |
+| 4 | Performance evaluation (F1, ROC-AUC) |
+
+
+
+## Next Steps
+
+- Add k-mer based features
+- Explore deep learning sequence models
+- Expand to multi-class disease classification
+
+---
+
+## How to Run
+
+```bash
+# Set up environment
+pip install -r requirements.txt
+
+# Run Notebooks:
+# 1. Data preparation
+# 2. Model training and evaluation
+
 
 ## Contact
  
