@@ -1,10 +1,10 @@
-# 🎓 miRNA-Disease Association Prediction using Machine Learning
+#  miRNA-Disease Association Prediction using Machine Learning
 
 This project aims to predict whether a microRNA (miRNA) is associated with cancer using basic sequence features and machine learning techniques. It combines biological knowledge from HMDD and sequence data from miRBase, extracts biologically meaningful features, and builds a classifier to distinguish between cancer-related and non-cancer miRNAs.
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```
 mirna-ml-project/
@@ -21,7 +21,7 @@ mirna-ml-project/
 
 ---
 
-## 🧬 Data Sources
+##  Data Sources
 
 | Source | Description |
 |--------|-------------|
@@ -30,7 +30,7 @@ mirna-ml-project/
 
 ---
 
-## ⚙️ Feature Extraction
+## ⚙ Feature Extraction
 
 We extracted basic sequence-level features from each miRNA:
 
@@ -44,7 +44,7 @@ We extracted basic sequence-level features from each miRNA:
 
 ---
 
-## 🧪 Model Training & Evaluation
+##  Model Training & Evaluation
 
 A `RandomForestClassifier` was trained to classify miRNAs as either cancer-associated (`label = 1`) or not (`label = 0`).
 
@@ -67,7 +67,7 @@ All evaluations and plots are available in `02_model_training.ipynb`.
 
 ---
 
-## 📈 Sample Output
+##  Sample Output
 
 <img width="535" alt="截屏2025-04-07 22 48 47" src="https://github.com/user-attachments/assets/e2e0e965-7442-40cc-a656-20a1d37f8ebb" />
 
