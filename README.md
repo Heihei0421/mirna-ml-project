@@ -1,64 +1,69 @@
-# Bioinformatics & Machine Learning Project
-# Predicting Cancer-Associated microRNAs using Machine Learning
+# 🎓 miRNA-Disease Association Prediction using Machine Learning
 
-This project explores the use of sequence-derived features from human microRNAs to predict their association with cancer using machine learning models.
-
-**Supervisor**: Prof. Kevin Bryson  
-**Student**: Hang Yin | MSc Data Science, University of Glasgow
+This project aims to predict whether a microRNA (miRNA) is associated with cancer using basic sequence features and machine learning techniques. It combines biological knowledge from HMDD and sequence data from miRBase, extracts biologically meaningful features, and builds a classifier to distinguish between cancer-related and non-cancer miRNAs.
 
 ---
 
-## Objectives
-
-- Integrate public bioinformatics data (HMDD, miRBase)
-- Extract simple but effective features (e.g. GC content, sequence length)
-- Train ML models to predict miRNA-disease associations
-- Evaluate model performance and interpret biological relevance
+## 📁 Project Structure
+‘’‘
+mirna-ml-project/ ├── notebooks/ │ ├── 01_data_eda.ipynb # Data cleaning & feature engineering │ └── 02_model_training.ipynb # Model training, evaluation & visualization ├── data/ │ └── processed/ │ └── mirna_features.csv # Final feature dataset used for modeling ├── README.md └── requirement.txt # Python dependencies
+’‘’
 
 ---
 
-## Dataset Sources
+## 🧬 Data Sources
 
-- **HMDD v3.2**: [http://www.cuilab.cn/hmdd](http://www.cuilab.cn/hmdd)  
-- **miRBase**: [https://www.mirbase.org/download/](https://www.mirbase.org/download/)
-
-The final processed dataset contains:
-- 800+ labeled miRNAs
-- Features: GC content, sequence length (k-mer to be added)
-- Binary label: 1 = cancer-related, 0 = not cancer-related
+| Source | Description |
+|--------|-------------|
+| [HMDD v3.2](http://www.cuilab.cn/hmdd) | Curated list of experimentally supported miRNA-disease associations |
+| [miRBase](https://www.mirbase.org/) | Mature miRNA sequences in FASTA format |
 
 ---
 
-## Methodology
+## ⚙️ Feature Extraction
 
-| Step | Description |
-|------|-------------|
-| 1 | Load miRNA sequence & cancer association |
-| 2 | Feature extraction (GC %, length) |
-| 3 | Random Forest classifier |
-| 4 | Performance evaluation (F1, ROC-AUC) |
+We extracted basic sequence-level features from each miRNA:
 
+| Feature       | Description                              |
+|---------------|------------------------------------------|
+| `length`      | Total number of nucleotides              |
+| `gc_content`  | Proportion of G and C nucleotides        |
+| `au_content`  | Proportion of A and U nucleotides        |
 
-
-## Next Steps
-
-- Add k-mer based features
-- Explore deep learning sequence models
-- Expand to multi-class disease classification
+> Feature extraction is done in `01_data_eda.ipynb`, and the resulting dataset is stored in `mirna_features.csv`.
 
 ---
 
-## How to Run
+## 🧪 Model Training & Evaluation
 
-```bash
-# Set up environment
-pip install -r requirements.txt
+A `RandomForestClassifier` was trained to classify miRNAs as either cancer-associated (`label = 1`) or not (`label = 0`).
 
-# Run Notebooks:
-# 1. Data preparation
-# 2. Model training and evaluation
+### Model Specs
 
+- Classifier: `RandomForestClassifier(n_estimators=100, random_state=42)`
+- Data Split: 80% training / 20% testing
+- Input features: `length`, `gc_content`, `au_content`
 
+### Evaluation Metrics
+
+| Metric              | Description |
+|---------------------|-------------|
+| ✅ Classification Report | Precision, Recall, F1-score |
+| ✅ Confusion Matrix      | Heatmap of prediction vs actual labels |
+| ✅ Feature Importance     | Visual ranking of each input feature |
+| ✅ ROC-AUC Score          | Classifier effectiveness over thresholds |
+
+All evaluations and plots are available in `02_model_training.ipynb`.
+
+---
+
+## 📈 Sample Output
+
+> 💬 You can add your confusion matrix / feature importance image below if you'd like!
+
+```python
+ROC-AUC Score: 0.87
+Top Feature: GC Content
 ## Contact
  
 Email: 2977811Y@student.gla.ac.uk  
