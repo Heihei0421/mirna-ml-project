@@ -30,7 +30,7 @@ mirna-ml-project/
 
 ---
 
-## ⚙ Feature Extraction
+##  Feature Extraction
 
 We extracted basic sequence-level features from each miRNA:
 
