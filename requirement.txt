@@ -1,0 +1,6 @@
+```txt
+pandas
+scikit-learn
+matplotlib
+seaborn
+biopython
