@@ -1,4 +1,4 @@
-```txt
+
 pandas
 scikit-learn
 matplotlib
