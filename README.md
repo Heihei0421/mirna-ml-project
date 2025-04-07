@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="https://github.com/Heihei0421/mirna-ml-project/blob/main/banner.png" alt="miRNA ML Banner" width="600"/>
+</p>
+
 #  miRNA-Disease Association Prediction using Machine Learning
 
 This project aims to predict whether a microRNA (miRNA) is associated with cancer using basic sequence features and machine learning techniques. It combines biological knowledge from HMDD and sequence data from miRBase, extracts biologically meaningful features, and builds a classifier to distinguish between cancer-related and non-cancer miRNAs.
