@@ -71,11 +71,12 @@ All evaluations and plots are available in `02_model_training.ipynb`.
 
 <img width="535" alt="截屏2025-04-07 22 48 47" src="https://github.com/user-attachments/assets/e2e0e965-7442-40cc-a656-20a1d37f8ebb" />
 
+<img width="541" alt="截屏2025-04-07 22 49 35" src="https://github.com/user-attachments/assets/8511e9ee-7061-442b-b1a2-fd77fcb0bfbd" />
 
 ```python
 ROC-AUC Score: 0.87
 Top Feature: GC Content
+
 ## Contact
- 
 Email: 2977811Y@student.gla.ac.uk  
 
